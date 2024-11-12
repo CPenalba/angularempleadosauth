@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Login } from '../../models/login';
 import { ServiceEmpleados } from '../../services/service.empleados';
 import { Router } from '@angular/router';
@@ -9,7 +9,7 @@ import { environment } from '../../../environments/environment.development';
   templateUrl: './login.component.html',
   styleUrl: './login.component.css',
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
   @ViewChild('cajausername') cajaUsername!: ElementRef;
   @ViewChild('cajapassword') cajaPassword!: ElementRef;
   public login!: Login;
@@ -33,5 +33,9 @@ export class LoginComponent {
         );
       }
     );
+  }
+
+  ngOnInit(): void {
+    environment.token = '';
   }
 }
