@@ -9,6 +9,7 @@ import { appRoutingProvider, routing } from './app.routing';
 import { provideHttpClient } from '@angular/common/http';
 import { PerfilempleadoComponent } from './components/perfilempleado/perfilempleado.component';
 import { ServiceEmpleados } from './services/service.empleados';
+import { SubordinadosComponent } from './components/subordinados/subordinados.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { ServiceEmpleados } from './services/service.empleados';
     MenuComponent,
     LoginComponent,
     PerfilempleadoComponent,
+    SubordinadosComponent,
   ],
   imports: [BrowserModule, routing, FormsModule],
   providers: [appRoutingProvider, provideHttpClient(), ServiceEmpleados],

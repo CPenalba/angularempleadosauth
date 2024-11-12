@@ -25,4 +25,14 @@ export class ServiceEmpleados {
     let url = environment.urlApiEmpleados + request;
     return this._http.get(url, { headers: header });
   }
+
+  getSubordinados(): Observable<any> {
+    let header = new HttpHeaders().set(
+      'Authorization',
+      `Bearer ${environment.token}`
+    );
+    let request = 'api/Empleados/Subordinados';
+    let url = environment.urlApiEmpleados + request;
+    return this._http.get(url, { headers: header });
+  }
 }
