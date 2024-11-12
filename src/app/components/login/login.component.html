@@ -1,1 +1,18 @@
-<p>login works!</p>
+<div>
+  <h1>Login</h1>
+  <hr />
+  <form #loginForm="ngForm">
+    <label>userName</label>
+    <input type="text" name="cajausername" #cajausername class="form-control" />
+    <br />
+    <label>password:</label>
+    <input
+      type="password"
+      name="cajapassword"
+      #cajapassword
+      class="form-control"
+    />
+    <br />
+    <button class="btn btn-dark" (click)="hacerLogin()">Login</button>
+  </form>
+</div>
